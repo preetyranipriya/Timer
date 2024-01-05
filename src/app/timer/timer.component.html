@@ -1,0 +1,12 @@
+<!-- timer.component.html -->
+<div class="timer-container">
+    <div class="timer">{{ timer }}</div>
+    <div clss="button">
+
+    <button class="timer-button" (click)="startTimer()" [disabled]="isTimerRunning">Start</button>
+    <button *ngIf="!isPaused" class="timer-button pause" (click)="pauseTimer()">Pause</button>
+    <button *ngIf="isPaused" class="timer-button resume" (click)="resumeTimer()">Resume</button>
+    <button class="timer-button reset" (click)="resetTimer()">Reset</button>
+     </div>
+  </div>
+  
